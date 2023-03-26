@@ -25,10 +25,13 @@ backgroundColor = Color( 0.87451, 0.964706, 0.960784, 1 )
 [node name="Pickups" type="Node2D" parent="."]
 
 [node name="Coin" parent="Pickups" instance=ExtResource( 6 )]
-position = Vector2( 179, 26 )
+position = Vector2( 180, 36 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 124, 50 )
+position = Vector2( 90, 54 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
