@@ -11,7 +11,7 @@
 script = ExtResource( 3 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( 232, 66 )
+position = Vector2( 232, 68 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
@@ -25,7 +25,7 @@ backgroundColor = Color( 0.87451, 0.964706, 0.960784, 1 )
 [node name="Pickups" type="Node2D" parent="."]
 
 [node name="Coin" parent="Pickups" instance=ExtResource( 6 )]
-position = Vector2( 180, 36 )
+position = Vector2( 180, 45 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -39,11 +39,16 @@ position = Vector2( 90, 54 )
 position = Vector2( 11, 10 )
 texture = ExtResource( 4 )
 
-[node name="Coins" type="Label" parent="HUD"]
+[node name="CoinLabel" type="Label" parent="HUD"]
 margin_left = 22.0
 margin_top = 4.0
 margin_right = 62.0
 margin_bottom = 18.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
 text = "0"
+__meta__ = {
+"_edit_group_": true
+}
 
 [connection signal="coin_picked_up" from="Pickups/Coin" to="." method="_on_Coin_coin_picked_up"]
